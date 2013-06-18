@@ -2,43 +2,43 @@
 
 
 
+                                # What do you want you like to do?
+puts "What Function would you like to use? (add, subtract," +
+  "divide, multiply, areas of squares, triangles, circles)"
+function = gets.chomp.downcase  #Takes Imput, lowers the case for readablity
 
 
-puts "What Function would you like to use? (add, subtract, divide, multiply, areas of squares, triangles, circles)"
-function = gets.chomp.downcase
-
-
-def add(x, y)
+def add(x, y)                   # Defines and addition function
   result = x + y
   return result
 end
 
-def subtract(x, y)
+def subtract(x, y)              # Defines a subtraction function
   return x - y
 end
 
-def multiply(x, y)
+def multiply(x, y)              # Defines a multiplication function
   return x * y
 end
 
-def division(x,y)
+def division(x,y)               # Defines a division function
   return x / y
 end
 
-def area_of_square(x,y)
+def area_of_square(x,y)         # Defining a area of a square
   return x * y
 end
 
-def area_of_circle
+def area_of_circle              # Defining a area of a cirlce
   pi = 3.14
   return pi*(r**2)
 end
 
-def area_of_triangle(x,y)
+def area_of_triangle(x,y)       # Defining a area of a triangle
   return 0.5*(x*y)
 end
 
-def get_two_numbers
+def get_two_numbers             # Defines a get function, grabbing two numbers and returning them
     puts "Give me the first number"
     first = gets.chomp.to_f
     puts "Give me the second number"
@@ -46,7 +46,7 @@ def get_two_numbers
     return first, second
 end
 
-def get_length_width
+def get_length_width            # Deines a get function, grabs a length and a width and returns them
     puts "Give me the length"
     length = gets.chomp.to_f
     puts "Give me the width"
@@ -108,9 +108,11 @@ when "area"
       radius = gets.chomp.to_i
       puts area_of_circle(radius)
     when "triangle"
+      puts "subtitute base and height with length and width"
       x,y = get_length_width
       puts area_of_triangle(x,y)
     end
-
-end
-
+else
+    puts "That is not an operation I understand..."
+    puts " "
+  end
