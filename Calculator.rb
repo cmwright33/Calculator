@@ -38,6 +38,16 @@ def area_of_triangle(x,y)       # Defining a area of a triangle
   return 0.5*(x*y)
 end
 
+def volume_of_a_cylinder(x,y)
+  pi= 3.14
+  return pi*(x**2)*y
+end
+
+def volume_of_a_cube(x,y,z)
+  return x*y*z
+
+
+
 def get_two_numbers             # Defines a get function, grabbing two numbers and returning them
     puts "Give me the first number"
     first = gets.chomp.to_f
@@ -46,73 +56,68 @@ def get_two_numbers             # Defines a get function, grabbing two numbers a
     return first, second
 end
 
-def get_length_width            # Deines a get function, grabs a length and a width and returns them
-    puts "Give me the length"
+
+def get_three_numbers           # Deines a get function, grabs a three numbers
+    puts "Give me the first"
     length = gets.chomp.to_f
-    puts "Give me the width"
+    puts "Give me the second"
     width = gets.chomp.to_f
-    return length, width
+    puts "Give me the third"
+    length = gets.chomp.to_f
+    return first, second, third
 end
+
+
+
 
 case function
 when "add"
   x,y = get_two_numbers
   puts add(x,y)
 
- # puts "what would you like to add"
- # addnum = gets.chomp.to_i
- # puts "how about another number"
- # addnum_2 = gets.chomp.to_i
- # puts add(addnum, addnum_2)
-
 when "subtract"
   x,y = get_two_numbers
   puts subtract(x,y)
-
- # puts "what would you like to subtract"
- # subnum = gets.chomp.to_i
- # puts "how about another number"
- # subnum_2 = gets.chomp.to_i
- # puts subtract(subnum,subnum_2)
-
 
 when "multiply"
   x,y = get_two_numbers
   puts multiply(x,y)
 
- # puts "what would you like to multiply"
- # multnum = gets.chomp.to_i
- # puts "how about another number"
- # multnum_2 = gets.chomp.to_i
- # puts multiply(multnum, multnum_2)
-
 when "divide"
   x,y = get_two_numbers
   puts division(x,y)
-
+when "volume"
+  puts "volume of what?"
+  area = gets.chomp.downcase
+    case area
+    when "cube"
+      puts "what is the length, width and height"
+      x,y,z = get_three_numbers
+      puts volume_of_a_cube(x,y,z)
+    when "cylinder"
+      puts "What is the radius and height?"
+      x,y = get_two_numbers
+      puts volume_of_a_cylinder(x,y)
+    end
 
 when "area"
   puts "area of what?"
   area = gets.chomp.downcase
     case area
     when "square"
-      x,y = get_length_width
+      x,y = get_two_numbers
       puts area_of_square(x,y)
-
-#      puts "What is the length?"
-#      length = gets.chomp.to_i
-#      puts "What is the width?"
-#      width = gets.chomp.to_i
     when "circle"
       puts "What is the radius?"
       radius = gets.chomp.to_i
       puts area_of_circle(radius)
     when "triangle"
-      puts "subtitute base and height with length and width"
-      x,y = get_length_width
+      puts "Whats the base and height?"
+      x,y = get_two_numbers
       puts area_of_triangle(x,y)
     end
 else
     puts "That is not an operation I understand..."
     puts " "
   end
+end
