@@ -6,7 +6,7 @@ It will:
   Subtract,
   Divide,
   Multiply,
-  Find the:
+Find the:
   Area of Square,
   Area of a Circle,
   Area of Triangle,

@@ -2,48 +2,52 @@
 
 
 
-                                # What do you want you like to do?
-puts "What Function would you like to use? (add, subtract," +
-  "divide, multiply, areas of squares, triangles, circles)"
+  # What do you want you like to do?
+
+puts "What would you like the calculator do?"
+puts "You Can:"
+puts "1. add, subtract, divide, multiply two numbers"
+puts "2. Find the areas of squares, triangles, circles"
+puts "3. Find the volumes of cubes or cylinders"
 function = gets.chomp.downcase  #Takes Imput, lowers the case for readablity
 
 
-def add(x, y)                   # Defines and addition function
+def add(x, y)                   # Defines the addition function
   result = x + y
   return result
 end
 
-def subtract(x, y)              # Defines a subtraction function
+def subtract(x, y)              # Defines the subtraction function
   return x - y
 end
 
-def multiply(x, y)              # Defines a multiplication function
+def multiply(x, y)              # Defines the multiplication function
   return x * y
 end
 
-def division(x,y)               # Defines a division function
+def division(x,y)               # Defines the division function
   return x / y
 end
 
-def area_of_square(x,y)         # Defining a area of a square
+def area_of_square(x,y)         # Defines the area of a square
   return x * y
 end
 
-def area_of_circle              # Defining a area of a cirlce
+def area_of_circle              # Defines the area of a cirlce
   pi = 3.14
   return pi*(r**2)
 end
 
-def area_of_triangle(x,y)       # Defining a area of a triangle
+def area_of_triangle(x,y)       # Defines the area of a triangle
   return 0.5*(x*y)
 end
 
-def volume_of_a_cylinder(x,y)
+def volume_of_a_cylinder(x,y)   # Defines the volume of a cylinder function
   pi= 3.14
   return pi*(x**2)*y
 end
 
-def volume_of_a_cube(x,y,z)
+def volume_of_a_cube(x,y,z)     # Defines the volume of a cylinder function
   return x*y*z
 
 
@@ -67,8 +71,9 @@ def get_three_numbers           # Deines a get function, grabs a three numbers
     return first, second, third
 end
 
-
-
+##
+## Where the Program Starts
+##
 
 case function
 when "add"
