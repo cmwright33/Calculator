@@ -2,13 +2,13 @@
 
 
 
-  # What do you want you like to do?
+# Prompts an introduction and asks for task to preform
 
 puts "What would you like the calculator do?"
 puts "You Can:"
 puts "1. add, subtract, divide, multiply two numbers"
-puts "2. Find the areas of squares, triangles, circles"
-puts "3. Find the volumes of cubes or cylinders"
+puts "2. Find the (area)s of squares, triangles, circles"
+puts "3. Find the (volume)s of cubes or cylinders"
 function = gets.chomp.downcase  #Takes Imput, lowers the case for readablity
 
 
@@ -49,7 +49,7 @@ end
 
 def volume_of_a_cube(x,y,z)     # Defines the volume of a cylinder function
   return x*y*z
-
+end
 
 
 def get_two_numbers             # Defines a get function, grabbing two numbers and returning them
@@ -62,13 +62,13 @@ end
 
 
 def get_three_numbers           # Deines a get function, grabs a three numbers
-    puts "Give me the first"
-    length = gets.chomp.to_f
-    puts "Give me the second"
-    width = gets.chomp.to_f
-    puts "Give me the third"
-    length = gets.chomp.to_f
-    return first, second, third
+    puts "Give me the first number"
+    num1 = gets.chomp.to_f
+    puts "Give me the second number"
+    num2 = gets.chomp.to_f
+    puts "Give me the third number"
+    num3 = gets.chomp.to_f
+    return num1, num2, num3
 end
 
 ##
@@ -96,7 +96,7 @@ when "volume"
   area = gets.chomp.downcase
     case area
     when "cube"
-      puts "what is the length, width and height"
+      puts "input as follows: length, width and height"
       x,y,z = get_three_numbers
       puts volume_of_a_cube(x,y,z)
     when "cylinder"
@@ -125,4 +125,5 @@ else
     puts "That is not an operation I understand..."
     puts " "
   end
-end
+
+

@@ -1,11 +1,11 @@
 Calculator
 
-It's a simple Calculator
+It's a simple Calculator /n
 It will:
   Add,
   Subtract,
   Divide,
-  Multiply,
+  Multiply, /n
 Find the:
   Area of Square,
   Area of a Circle,
